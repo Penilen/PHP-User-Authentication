@@ -1,51 +1,74 @@
-# PHP-User-Authentication
-A simple PHP user registration and login system using salted bcrypt password hashing and PDO for database access.
-This project is a basic PHP user authentication system that allows users to register and log in securely. Passwords are salted and hashed using bcrypt. The system uses PDO for database communication with MySQL.
+PHP User Authentication System
+Overview
 
-Features:
+A simple PHP-based user authentication system implementing secure registration and login functionality using MySQL and PDO.
 
-User registration with unique username check
+This project focuses on understanding authentication fundamentals and secure password handling practices.
 
-Password salting and hashing (bcrypt)
+Features
 
-User login with password verification
+User registration
 
-Simple and clean PHP code
+User login
 
-Requirements:
+Password hashing using password_hash() (bcrypt)
 
-PHP 7.4 or higher
+Secure password verification using password_verify()
 
-MySQL database named auth_project
+PDO prepared statements to prevent SQL injection
 
-PDO extension enabled
+Basic session handling
 
-Setup:
+Purpose
 
-Create the database auth_project and a table users with columns:
+The goal of this project was to:
 
-id (INT, primary key, auto-increment)
+Understand authentication flow (register → login → session)
 
-username (VARCHAR, unique)
+Implement secure password storage
 
-password (VARCHAR)
+Practice prepared statements with PDO
 
-salt (VARCHAR)
+Learn backend security fundamentals
 
-Update the db.php file with your database credentials and port.
+Project Structure
 
-Run the project on a local PHP server like XAMPP.
+register.php – Handles user registration
 
-Usage:
+login.php – Handles login and session creation
 
-Open register.php in your browser to create a new user.
+db.php – Database connection using PDO
 
-Open login.php to log in with existing credentials.
+Technologies Used
 
-Security Notes:
+PHP
 
-Passwords are stored securely using bcrypt with a unique salt per user.
+MySQL
 
-Keep your database credentials private.
+PDO
 
-For production, consider using environment variables or secure config files.
+XAMPP (local development)
+
+Security Practices Implemented
+
+Password hashing (bcrypt)
+
+Prepared statements
+
+Secure password verification
+
+Separation of DB logic
+
+How to Run
+
+Install XAMPP (or similar PHP/MySQL stack)
+
+Create a database and user table
+
+Update database credentials in db.php
+
+Run locally on localhost
+
+Notes
+
+This project was built for educational purposes and demonstrates secure authentication fundamentals in PHP.
