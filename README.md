@@ -1,4 +1,4 @@
-PHP User Authentication System
+# PHP User Authentication System
 Overview
 
 A simple PHP-based user authentication system implementing secure registration and login functionality using MySQL and PDO.
